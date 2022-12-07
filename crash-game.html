@@ -28,9 +28,11 @@ function ya() {
     
     Http.onreadystatechange = (e) => {
       if (Http.responseText == "1") {
-        window.open("about:blank")
+        alert("Crashed")
 
-        while(1)location.reload(1)
+        // window.open("about:blank")
+
+        // while(1)location.reload(1)
       }
     }
     }

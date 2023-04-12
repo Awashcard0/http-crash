@@ -26,12 +26,12 @@ function hello() {
 function ya() {
 
     const Http = new XMLHttpRequest();
-    const url='https://raw.githubusercontent.com/Awashcard0/http-crash/main/text.txt';
+    const url='https://httpc.pages.dev/text.txt';
     Http.open("GET", url);
     Http.send();
     
     Http.onreadystatechange = (e) => {
-      if (Http.responseText == "y") {
+      if (Http.responseText.includes("y")) {
         alert("Crashed")
 
         // window.open("about:blank")

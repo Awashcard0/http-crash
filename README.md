@@ -1,4 +1,6 @@
 # http-crash
+**Do not copy from main directory**
+
 What started it as a thing to pass the time in robotics class is now I think I actually care about which is rare.
 
  so I have made three different versions of it

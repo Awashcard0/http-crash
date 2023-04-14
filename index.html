@@ -27,14 +27,14 @@ function hello() {
   }, 5000);
 }
 
-function ya() {
+async function ya() {
 
 
-   let mode = get(url + "/val");
+   let mode = await get(url + "/val");
    console.log(mode)
       if (mode.includes("ym")) {
         // Crash with msg
-        alert(get(url + "/msg"))
+        alert(await get(url + "/msg"))
             console.log("crash")
             // window.open("about:blank")
 
@@ -48,7 +48,7 @@ function ya() {
       } else if (mode.includes("m")) {
         console.log("msg")
         // only msg
-            alert(get(url + "/msg"))
+            alert(await get(url + "/msg"))
       } else {
         console.log("no + " + mode)
       }

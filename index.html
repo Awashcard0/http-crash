@@ -31,7 +31,7 @@ function ya() {
     let Http = new XMLHttpRequest();
     let geturl = url + "/val"
     Http.open("GET", geturl, false);
-    Http.send();
+    Http.send(null);
     
     Http.onreadystatechange = (e) => {
       alert("cleck")
@@ -41,7 +41,7 @@ function ya() {
         let Https = new XMLHttpRequest();
         let getmsgurl = url + "/msg"
         Https.open("GET", getmsgurl, false);
-        Https.send();
+        Https.send(null);
         Https.onreadystatechange = (e) => {
             alert(Https.responseText)
             // window.open("about:blank")

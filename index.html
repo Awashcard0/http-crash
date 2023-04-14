@@ -29,7 +29,8 @@ function hello() {
 function ya() {
 
     let Http = new XMLHttpRequest();
-    Http.open("GET", url + "/val");
+    let geturl = url + "/val"
+    Http.open("GET", geturl);
     Http.send();
     
     Http.onreadystatechange = (e) => {
@@ -38,7 +39,8 @@ function ya() {
       if (mode.includes("ym")) {
         // Crash with msg
         let Https = new XMLHttpRequest();
-        Https.open("GET", url + "/msg");
+        let getmsgurl = url + "/msg"
+        Https.open("GET", getmsgurl);
         Https.send();
         Https.onreadystatechange = (e) => {
             alert(Https.responseText)

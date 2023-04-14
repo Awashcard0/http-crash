@@ -17,59 +17,54 @@
 // enter pass here
 var url = "https://crash-controle.awashcard0.repl.co"
 
+hello();
 
-    hello()
-
-function hello() {
-  setTimeout(function() {
-    ya()
-    hello()
-  }, 5000);
+async function hello() {
+  while (true) {
+    await ya();
+    await sleep(5000);
+  }
 }
 
 async function ya() {
+  let mode = await get(url + "/val");
+  console.log(mode);
+  if (mode.includes("ym")) {
+    // Crash with msg
+    alert(await get(url + "/msg"))
+    console.log("crash")
+  } else if (mode.includes("y")) {
+    console.log("crash")
+    // Just crash
+  } else if (mode.includes("m")) {
+    console.log("msg")
+    // only msg
+    alert(await get(url + "/msg"))
+  } else {
+    console.log("no + " + mode)
+  }
+}
 
-
-   let mode = await get(url + "/val");
-   console.log(mode)
-      if (mode.includes("ym")) {
-        // Crash with msg
-        alert(await get(url + "/msg"))
-            console.log("crash")
-            // window.open("about:blank")
-
-            // while(1)location.reload(1)
-      } else if (mode.includes("y")) {
-        console.log("crash")
-        // Just crash
-        // window.open("about:blank")
-
-        // while(1)location.reload(1)
-      } else if (mode.includes("m")) {
-        console.log("msg")
-        // only msg
-            alert(await get(url + "/msg"))
+function get(curl) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', curl);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        resolve(xhr.responseText);
       } else {
-        console.log("no + " + mode)
+        reject('Request failed. Returned status code:', xhr.status);
       }
-    }
-
-    function get(curl) {
-      const xhr = new XMLHttpRequest();
-xhr.open('GET', curl);
-xhr.onload = function() {
-if (xhr.status === 200) {
-
-  return xhr.responseText;
-
-} else {
-console.error('Request failed. Returned status code:', xhr.status);
+    };
+    xhr.onerror = function() {
+      reject('Request failed. There was a network error.');
+    };
+    xhr.send();
+  });
 }
-};
-xhr.onerror = function() {
-console.error('Request failed. There was a network error.');
-};
-xhr.send();
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
-    </script>
+</script>
 </html>

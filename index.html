@@ -34,7 +34,8 @@ function ya() {
     
     Http.onreadystatechange = (e) => {
       alert("cleck")
-      if (Http.responseText.includes("ym")) {
+      var mode = Http.responseText;
+      if (mode.includes("ym")) {
         // Crash with msg
         let Https = new XMLHttpRequest();
         Https.open("GET", url + "/msg");
@@ -45,12 +46,12 @@ function ya() {
 
             // while(1)location.reload(1)
         }
-      } else if (Http.responseText.includes("y")) {
+      } else if (mode.includes("y")) {
         // Just crash
         // window.open("about:blank")
 
         // while(1)location.reload(1)
-      } else if (Http.responseText.includes("m")) {
+      } else if (mode.includes("m")) {
         // only msg
 
         let Http = new XMLHttpRequest();
@@ -60,7 +61,7 @@ function ya() {
             alert(Http.responseText)
         }
       } else {
-        alert("no\n" + Http.responseText)
+        alert("no + " + mode)
       }
     }
     }

@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
             <input type="text" name="password" placeholder="Password">
             <button type="submit">Submit</button>
           </form>
-          <a href="#" onclick="alert('Value shoud be, y for crash, ym for crash with message, n for no message or crash');">Help</a>
+          <a href="#" onclick="alert('Value shoud be, y for crash, ym for crash with message, m for just message, n for no message or crash');">Help</a>
         </body>
       </html>
     `;

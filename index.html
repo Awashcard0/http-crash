@@ -30,7 +30,8 @@ function hello() {
 function ya() {
 
 
-   mode = get(url + "/val");
+   let mode = get(url + "/val");
+   console.log(mode)
       if (mode.includes("ym")) {
         // Crash with msg
         alert(get(url + "/msg"))

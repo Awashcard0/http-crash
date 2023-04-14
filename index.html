@@ -14,8 +14,8 @@
     
 </body>
 <script>
-// enter pass here
-var url = "https://crash-controle.awashcard0.repl.co"
+// enter url here
+var url = "URL HERE"
 
 hello();
 
@@ -28,20 +28,19 @@ async function hello() {
 
 async function ya() {
   let mode = await get(url + "/val");
-  console.log(mode);
+  // console.log(mode);
   if (mode.includes("ym")) {
     // Crash with msg
     alert(await get(url + "/msg"))
-    console.log("crash")
+    // console.log("crash")
   } else if (mode.includes("y")) {
-    console.log("crash")
+    // console.log("crash")
     // Just crash
   } else if (mode.includes("m")) {
-    console.log("msg")
     // only msg
     alert(await get(url + "/msg"))
   } else {
-    console.log("no + " + mode)
+    // Do nothing
   }
 }
 

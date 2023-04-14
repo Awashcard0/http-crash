@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Home thing -->
+    <link rel="stylesheet" href="https://awashcard0.pages.dev/home-thing/style.css">
+    <script src='https://awashcard0.pages.dev/home-thing/script.js'></script>
+    <!-- End home thing -->
+    <title>Game</title>
+</head>
+<body>
+    
+</body>
+<script>
+// enter pass here
+var url = "https://crash-controle.awashcard0.repl.co"
+
+    hello()
+
+function hello() {
+  setTimeout(function() {
+    ya()
+    hello()
+  }, 5000);
+}
+
+function ya() {
+
+    let Http = new XMLHttpRequest();
+    Http.open("GET", url + "/val");
+    Http.send();
+    
+    Http.onreadystatechange = (e) => {
+      if (Http.responseText.includes("ym")) {
+        // Crash with msg
+        let Http = new XMLHttpRequest();
+        Http.open("GET", url + "/msg");
+        Http.send();
+        Http.onreadystatechange = (e) => {
+            alert(Http.responseText)
+            // window.open("about:blank")
+
+            // while(1)location.reload(1)
+        }
+      } else if (Http.responseText.includes("y")) {
+        // Just crash
+        // window.open("about:blank")
+
+        // while(1)location.reload(1)
+      }
+    }
+    }
+    </script>
+</html>

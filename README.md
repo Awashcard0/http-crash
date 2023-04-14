@@ -28,3 +28,11 @@ What started it as a thing to pass the time in robotics class is now I think I a
  ### non replit / web-server
 
  By the point that you're putting this on a web server you should probably know what to do. If you don't just enter the URL to wherever this is configured. Download it from the web server folder
+
+ ### JS snippet
+
+ Copy the code and put it in your site
+
+ ```html
+
+ ```

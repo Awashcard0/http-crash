@@ -36,7 +36,7 @@ function ya() {
     Http.send(null);
     
     Http.onreadystatechange = (e) => {
-      alert("cleck")
+      console.log("cleck")
       var mode = Http.responseText;
       if (mode.includes("ym")) {
         // Crash with msg
@@ -46,16 +46,19 @@ function ya() {
         Https.send(null);
         Https.onreadystatechange = (e) => {
             alert(Https.responseText)
+            console.log("crash")
             // window.open("about:blank")
 
             // while(1)location.reload(1)
         }
       } else if (mode.includes("y")) {
+        console.log("crash")
         // Just crash
         // window.open("about:blank")
 
         // while(1)location.reload(1)
       } else if (mode.includes("m")) {
+        console.log("mg")
         // only msg
 
         let Http = new XMLHttpRequest();
@@ -65,7 +68,7 @@ function ya() {
             alert(Http.responseText)
         }
       } else {
-        alert("no + " + mode)
+        console.log("no + " + mode)
       }
     }
     }

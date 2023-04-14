@@ -30,7 +30,7 @@ function ya() {
 
     let Http = new XMLHttpRequest();
     let geturl = url + "/val"
-    Http.open("GET", geturl);
+    Http.open("GET", geturl, false);
     Http.send();
     
     Http.onreadystatechange = (e) => {
@@ -40,7 +40,7 @@ function ya() {
         // Crash with msg
         let Https = new XMLHttpRequest();
         let getmsgurl = url + "/msg"
-        Https.open("GET", getmsgurl);
+        Https.open("GET", getmsgurl, false);
         Https.send();
         Https.onreadystatechange = (e) => {
             alert(Https.responseText)

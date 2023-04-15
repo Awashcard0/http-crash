@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +48,7 @@ async function ya() {
 
     if (!msgWait) {
     alert(await get(url + "/msg"))
-    msgWait();
+    msgWaitFun();
     }
   } else {
 
@@ -76,7 +77,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function msgWait(); {
+function msgWaitFun() {
   msgWait = true
   sleep(10000)
   msgWait = false

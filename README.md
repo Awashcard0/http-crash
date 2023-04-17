@@ -23,7 +23,7 @@ What started it as a thing to pass the time in robotics class is now I think I a
 
  1. Click on [this link](https://replit.com/@Awashcard0/Crash-controle) and fork the repl
  2. In replit click on secrets > create new secret > name is PASS all uppercase > in value put whatever you want the password to be > save
- 3. Then enter your repls URL into the URL variable on the web page
+ 3. Then enter your repls URL into the URL variable on the web page. It shoud look like this `var url = "https://Crash-controle.<your replit name>.repl.co"` note there is no slash at the end
 
  ### non replit / web-server
 
